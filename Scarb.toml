@@ -1,0 +1,23 @@
+[package]
+name = "workshop"
+version = "0.1.0"
+edition = "2023_01"
+
+# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
+
+[dependencies]
+starknet = ">=2.8.0"
+snforge_std = {git = "https://github.com/foundry-rs/starknet-foundry", tag="v0.27.0"}
+kill_switch = { git = "https://github.com/starknet-edu/kill-switch.git", branch="master" }
+openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.16.0" }
+
+
+[scripts]
+test = "snforge test"
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
+build-external-contracts = ["kill_switch::KillSwitch"]
+
+
