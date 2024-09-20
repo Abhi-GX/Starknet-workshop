@@ -6,10 +6,10 @@
   },
   "dependencies": {
     "@tsconfig/node21": "21.0.3",
-    "dotenv": "16.4.5",
+    "dotenv": "^16.4.5",
     "starknet": "^7.0.0",
-    "ts-node": "10.9.2",
+    "ts-node": "^10.9.2",
     "tslib": "^2.7.0",
-    "typescript": "5.5.4"
+    "typescript": "^5.5.4"
   }
 }
