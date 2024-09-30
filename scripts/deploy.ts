@@ -43,7 +43,7 @@ async function main() {
     salt: stark.randomAddress(),
   });
 
-  // Connect the new contract instance :
+  
   const myTestContract = new Contract(
     sierraCode.abi,
     deployResponse.deploy.contract_address,
