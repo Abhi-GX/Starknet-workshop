@@ -51,7 +51,6 @@ mod counter_contract {
         fn get_counter(self: @ContractState) -> u32 {
             self.counter.read()
         }
-        //incrementing counter 
         fn increase_counter(ref self: ContractState) {
             self.ownable.assert_only_owner();
             let kill_switch_address = self.kill_switch.read();
